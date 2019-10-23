@@ -12,7 +12,13 @@ const connect = function() {
   conn.setEncoding('utf8'); 
   conn.on("connect", () => {
     conn.write("Name: LUL");
+    // setInterval(() => {
+    //   conn.write("Move: up")
+    // }, 10)
   })
+  
+
+  
   conn.on("data", (data) => {
     console.log("Server says: ", data)
   });
